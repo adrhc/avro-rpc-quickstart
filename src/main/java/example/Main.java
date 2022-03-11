@@ -70,9 +70,9 @@ public class Main {
 
         // fill in the Message record and send it
         Message message = new Message();
-        message.setTo(new Utf8(args[0]));
-        message.setFrom(new Utf8(args[1]));
-        message.setBody(new Utf8(args[2]));
+        message.setTo(args[0]);
+        message.setFrom(args[1]);
+        message.setBody(args[2]);
         System.out.println("Calling proxy.send with message:  " + message.toString());
         System.out.println("Result: " + proxy.send(message));
 
